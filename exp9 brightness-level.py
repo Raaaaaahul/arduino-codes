@@ -23,6 +23,10 @@ client.on_message = on_message
 
 try:
     client.loop_forever()
+
 except KeyboardInterrupt:
+    pass
+
+finally:
+    pwm.stop()
     GPIO.cleanup()
-    exit()

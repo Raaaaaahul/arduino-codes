@@ -20,8 +20,8 @@ def get_distance():
     time.sleep(0.00001)
     GPIO.output(TRIG, False)
 
-    pulse_start = time.time()
     pulse_end = time.time()
+    pulse_start = time.time()
 
     while GPIO.input(ECHO) == 0:
         pulse_start = time.time()
